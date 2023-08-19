@@ -1,0 +1,279 @@
+{
+	"info": {
+		"_postman_id": "91cabe6e-1cfc-447f-80d1-45bd1e082c49",
+		"name": "OpenAI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ChatCompletion",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"question\": \"what is chatgpt\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/chat",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"chat"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "ChatCompletionExample",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"question\": \"what is chatgpt\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/chat",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"chat"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 19 Aug 2023 17:32:09 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"chatcmpl-7pK5v7Kz9LcHtn7if1l7FbtBcfzsP\",\n    \"object\": \"chat.completion\",\n    \"model\": \"gpt-3.5-turbo-0613\",\n    \"created\": \"+4635785-06-01\",\n    \"choices\": [\n        {\n            \"index\": 0,\n            \"message\": {\n                \"role\": \"assistant\",\n                \"content\": \"Chatbot GPT (ChatGPT) is a language model developed by OpenAI. It is trained using deep learning techniques on a large corpus of text from the internet. ChatGPT is designed to generate human-like responses to prompts or questions in a conversational format. It can engage in free-flowing conversations and provide informative or creative responses based on the input it receives. ChatGPT has been trained to be more controllable and provide safer outputs compared to earlier versions, allowing users to easily customize its behavior within certain bounds.\"\n            },\n            \"finish_reason\": \"stop\"\n        }\n    ],\n    \"usage\": {\n        \"prompt_tokens\": \"12\",\n        \"completion_tokens\": \"107\",\n        \"total_tokens\": \"119\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Transcription",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/D:/experimentCode/openAI/gpt-whisper-demo/demo/vdespa-medium-whisper-api.mp3"
+						},
+						{
+							"key": "model",
+							"value": "whisper-1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/transcription",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"transcription"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "TranscriptionExample",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/D:/experimentCode/openAI/gpt-whisper-demo/demo/vdespa-medium-whisper-api.mp3"
+								},
+								{
+									"key": "model",
+									"value": "whisper-1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/transcription",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"transcription"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 19 Aug 2023 17:37:30 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"text\": \"Hi there, my name is Valentin Despas and if you can see this text, it means that you have successfully used the Whisper API from OpenAI to transcribe this audio to text. I would really appreciate it if you could leave a comment below and give this post a few claps. Thank you.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "ImageGeneration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"prompt\": \"A cute baby sea otter\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/image",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"image"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "ImageGeneration",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"prompt\": \"A cute baby sea otter\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/image",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"image"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 19 Aug 2023 19:20:21 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"created\": 1692472820,\n    \"data\": [\n        {\n            \"url\": \"https://oaidalleapiprodscus.blob.core.windows.net/private/org-H8CKWUHUu2QkAWiHte8fyD8n/user-LS8Ad1SQurQINaUEenPgiW9V/img-I8nTxnSpa4KQsPdUYrMNdOXB.png?st=2023-08-19T18%3A20%3A20Z&se=2023-08-19T20%3A20%3A20Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-08-19T10%3A55%3A32Z&ske=2023-08-20T10%3A55%3A32Z&sks=b&skv=2021-08-06&sig=cRTQxjuP63nfKAJ24rqVNo68NUr%2B81kS2DDI0JKOAe8%3D\"\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}

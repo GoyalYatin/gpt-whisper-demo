@@ -1,0 +1,12 @@
+openai-service:
+  api-key: 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
+  gpt-model: gpt-3.5-turbo
+  audio-model: whisper-1
+  http-client:
+    read-timeout: 300000
+    connect-timeout: 300000
+  urls:
+    base-url: https://api.openai.com/v1
+    chat-url: /chat/completions
+    create-transcription-url: /audio/transcriptions
+    image-generation-url: /images/generations
