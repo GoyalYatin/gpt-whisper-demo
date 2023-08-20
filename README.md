@@ -6,8 +6,20 @@ APIs used
 - [Transcription](https://platform.openai.com/docs/api-reference/audio/createTranscription)
 - [Image Generation](https://platform.openai.com/docs/api-reference/images/create)
 
-Input and Outputs
-------
-- [Audio](/demo/vdespa-medium-whisper-api.mp3) input for the transcript
-- Generated [image](/demo/GeneratedImage.png) from the Dall.E
-- [Postman Collection](/demo/OpenAI.postman_collection.json) for the three api tests with one example each
+Examples
+-------
+[Postman Collection](/demo/OpenAI.postman_collection.json) for the three api tests with one example each
+
+####<b>1. Chat Completion</b><br/>
+![example](/demo/ChatGPT.PNG?raw=true)
+
+####<b>2. Audio Transcription</b><br/>
+![example](/demo/TranscriptionExample.PNG?raw=true)<br/>
+[Audio](/demo/vdespa-medium-whisper-api.mp3) input for the transcript
+
+
+####<b>3. Image Generation</b><br/>
+![example](/demo/ImageGenerationExample.PNG?raw=true)
+
+Generated Image<br/>
+![image](/demo/GeneratedImage.png?raw=true)
