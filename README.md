@@ -24,7 +24,7 @@ Examples
 ---------------------------------------------------------
 
 <b>3. Image Generation</b><br/>
-![example](/demo/ImageGenerationExample.PNG?raw=true)<br/>
+![example](/demo/ImageGenerationExample1.PNG?raw=true)<br/>
 
 Generated Image<br/>
 ![image](/demo/GeneratedImage.png?raw=true)
