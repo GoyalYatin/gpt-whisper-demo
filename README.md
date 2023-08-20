@@ -12,19 +12,19 @@ Examples
 -------
 [Postman Collection](/demo/OpenAI.postman_collection.json) for the three api tests with one example each
 
-<h4>1. Chat Completion</h4><br/>
-![example](/demo/ChatGPT.PNG?raw=true)
+<b>1. Chat Completion</b><br/>
+![example](/demo/ChatGPT.PNG?raw=true)<br/>
 
 -----------------------------------------
 
-<h4>2. Audio Transcription<h4><br/>
+<b>2. Audio Transcription<b><br/>
 ![example](/demo/TranscriptionExample.PNG?raw=true)<br/>
 [Audio](/demo/vdespa-medium-whisper-api.mp3) input for the transcript
 
 ---------------------------------------------------------
 
-<h4>3. Image Generation</h4><br/>
-![example](/demo/ImageGenerationExample.PNG?raw=true)
+<b>3. Image Generation</b><br/>
+![example](/demo/ImageGenerationExample.PNG?raw=true)<br/>
 
 Generated Image<br/>
 ![image](/demo/GeneratedImage.png?raw=true)
